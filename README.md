@@ -31,10 +31,3 @@ tbd..
 Contributions, suggestions, and issues are welcome! Feel free to fork the repository, submit pull requests, or open issues for new features and fixes.
 
 
----
-
-## 🙋 About
-
-Created and maintained by [samar1h](https://github.com/samar1h).
-
-
