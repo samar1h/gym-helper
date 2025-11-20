@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/gym-helper/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="gym_helper">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>gym_helper</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: black;
+        color: white;
+      }
+    }
+    #loading_indicator{
+      width: 100vh;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #indicator{
+      height: 50vh;
+      width: 50vh;
+    }
+  </style>
+</head>
+<body style="overflow: hidden;">
+  <div id="loading_indicator">
+    <picture id="indicator">
+      <!-- Dark mode -->
+      <source srcset="assets/images/3.webp" media="(prefers-color-scheme: dark)">
+      <!-- Light mode (default) -->
+      <img src="assets/images/1.gif" alt="Loading...">
+    </picture>
+  </div>
+  <script src="flutter_bootstrap.js" async></script>
+  <script>
+    window.onload = ()=>{
+      setTimeout(()=>{
+        var loading_indicator = document.getElementById("loading_indicator");
+        if (loading_indicator){
+          loading_indicator.remove();
+        }
+      }, 10000);
+    }
+  </script>
+</body>
+</html>
